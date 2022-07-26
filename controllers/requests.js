@@ -1,6 +1,7 @@
-const blizzard = require('blizzard.js')
+const blizzard = require('blizzard.js');
+const { response } = require('express');
 
-const wowClient = async (req, res = response) => {
+const getToken = async (req, res = response) => {
 
     const wowClient = await blizzard.wow.createInstance({
         key: process.env.BLIZZARD_CLIENT_ID,
@@ -9,7 +10,6 @@ const wowClient = async (req, res = response) => {
         locale: 'en_US', // optional
         token: '', // optional
       })
-    console.log(wowClient);
 
     res.status(200).json({
         ok: true,
@@ -18,5 +18,5 @@ const wowClient = async (req, res = response) => {
 }
 
 module.exports = {
-    wowClient
+    getToken,
 }

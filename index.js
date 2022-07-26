@@ -17,22 +17,24 @@ const app = express();
 app.use(cors())
 
 // Directorio Público
-app.use( express.static('public') );
+app.use(express.static('public'));
 
 // Lectura y parseo del body
-app.use( express.json() );
+app.use(express.json());
 
 // Rutas
-app.use('/api/auth', require('./routes/auth') );
-app.use('/', require('./routes/requests') );
+app.use('/api/auth', require('./routes/auth'));
+app.use('/', require('./routes/requests'));
+app.use('/', require('./routes/diablo3'));
+
 
 // TODO: CRUD: Eventos
 
 
 
 // Escuchar peticiones
-app.listen( process.env.PORT, () => {
-    console.log(`Servidor corriendo en puerto ${ process.env.PORT }`);
+app.listen(process.env.PORT, () => {
+    console.log(`Servidor corriendo en puerto ${process.env.PORT}`);
 });
 
 

@@ -11,6 +11,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "axios": "^0.27.2",
     "battlenet-api": "^0.13.0-deprecated",
     "bcryptjs": "^2.4.3",
     "blizzard.js": "^4.2.0",
@@ -19,6 +20,7 @@
     "express": "^4.17.1",
     "express-validator": "^6.5.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.18"
+    "mongoose": "^5.9.18",
+    "nodemon": "^2.0.19"
   }
 }
